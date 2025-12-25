@@ -738,8 +738,8 @@ cat >> "$HOME/agsbx/sb.json" <<EOF
       "listen_port": ${port_so},
       "users": [
       {
-      "username": "${uuid}",
-      "password": "${uuid}"
+      "username": "123",
+      "password": "456"
       }
      ]
     },
