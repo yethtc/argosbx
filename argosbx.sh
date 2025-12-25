@@ -1298,8 +1298,8 @@ port_so=$(cat "$HOME/agsbx/port_so")
 echo "请配合其他应用内置代理使用，勿做节点直接使用"
 echo "客户端地址：$server_ip"
 echo "客户端端口：$port_so"
-echo "客户端用户名：$uuser"
-echo "客户端密码：$upass"
+echo "客户端用户名：$suser"
+echo "客户端密码：$spass"
 echo
 fi
 argodomain=$(cat "$HOME/agsbx/sbargoym.log" 2>/dev/null)
