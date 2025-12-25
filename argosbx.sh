@@ -19,6 +19,8 @@ fi
 else
 [ "$1" = "del" ] || [ "$vwp" = yes ] || [ "$sop" = yes ] || [ "$vxp" = yes ] || [ "$ssp" = yes ] || [ "$vlp" = yes ] || [ "$vmp" = yes ] || [ "$hyp" = yes ] || [ "$tup" = yes ] || [ "$xhp" = yes ] || [ "$anp" = yes ] || [ "$arp" = yes ] || { echo "提示：未安装argosbx脚本，请在脚本前至少设置一个协议变量哦，再见！💣"; exit; }
 fi
+uuser=123
+upass=456
 export uuid=${uuid:-''}
 export port_vl_re=${vlpt:-''}
 export port_vm_ws=${vmpt:-''}
@@ -716,8 +718,8 @@ cat >> "$HOME/agsbx/xr.json" <<EOF
             "auth": "password",
              "accounts": [
                {
-               "user": 123,
-               "pass": 456"
+               "user": "$uuser",
+               "pass": "$upass""
                }
             ],
             "udp": true
