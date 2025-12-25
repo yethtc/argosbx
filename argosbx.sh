@@ -1,4 +1,6 @@
 #!/bin/sh
+suser=123
+spass=456
 export LANG=en_US.UTF-8
 [ -z "${vlpt+x}" ] || vlp=yes
 [ -z "${vmpt+x}" ] || { vmp=yes; vmag=yes; }
@@ -716,8 +718,8 @@ cat >> "$HOME/agsbx/xr.json" <<EOF
             "auth": "password",
              "accounts": [
                {
-               "user": "123",
-               "pass": "456"
+               "user": "$suser",
+               "pass": "$spass"
                }
             ],
             "udp": true
@@ -738,8 +740,8 @@ cat >> "$HOME/agsbx/sb.json" <<EOF
       "listen_port": ${port_so},
       "users": [
       {
-      "username": "123",
-      "password": "456"
+      "username": "$suser",
+      "password": "$spass"
       }
      ]
     },
@@ -1296,8 +1298,8 @@ port_so=$(cat "$HOME/agsbx/port_so")
 echo "请配合其他应用内置代理使用，勿做节点直接使用"
 echo "客户端地址：$server_ip"
 echo "客户端端口：$port_so"
-echo "客户端用户名：$uuid"
-echo "客户端密码：$uuid"
+echo "客户端用户名：$uuser"
+echo "客户端密码：$upass"
 echo
 fi
 argodomain=$(cat "$HOME/agsbx/sbargoym.log" 2>/dev/null)
